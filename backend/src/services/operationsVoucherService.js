@@ -108,7 +108,7 @@ function buildVoucherHtml(voucher, booking, agent) {
             <div>
               <span class="service-index">VEHICLE ${String(index + 1).padStart(2, '0')}</span>
               <h3>${esc(humanize(transport.vehicleType, 'Private Cab'))}</h3>
-              <p>${esc(transport.vendorName || 'Him Journey Tours Transport Partner')}</p>
+              <p>${esc(transport.vendorName || 'HindHolidays Transport Partner')}</p>
             </div>
             <span class="status ${transport.status === 'confirmed' ? 'confirmed' : ''}">${esc(humanize(transport.status, 'Assigned'))}</span>
           </div>
@@ -271,15 +271,15 @@ function buildVoucherHtml(voucher, booking, agent) {
     ${serviceCards}
     <div class="instructions">
       <div class="instruction guest"><strong>For the guest</strong>Present this voucher with a valid photo ID at check-in or pickup. Keep the voucher number available for assistance.</div>
-      <div class="instruction vendor"><strong>For the service partner</strong>Provide services exactly as listed above. Please do not collect payment from the guest unless separately authorized by Him Journey Tours.</div>
+      <div class="instruction vendor"><strong>For the service partner</strong>Provide services exactly as listed above. Please do not collect payment from the guest unless separately authorized by HindHolidays.</div>
     </div>
     <div class="authorization">
-      <div class="auth-copy"><strong>Authorized by Him Journey Tours Operations</strong><p>Digitally generated on ${fmtDate(voucher.issuedAt || new Date())} · No signature required</p></div>
-      <div class="stamp">HIM JOURNEY TOURS<br/>VERIFIED<br/>VOUCHER</div>
+      <div class="auth-copy"><strong>Authorized by HindHolidays Operations</strong><p>Digitally generated on ${fmtDate(voucher.issuedAt || new Date())} · No signature required</p></div>
+      <div class="stamp">HINDHOLIDAYS<br/>VERIFIED<br/>VOUCHER</div>
     </div>
   </section>
   <footer class="footer">
-    <span><strong>Him Journey Tours</strong> · Your trusted travel partner</span>
+    <span><strong>HindHolidays</strong> · Your trusted travel partner</span>
     <span>${esc(booking.customerPhone || booking.customerEmail || booking.bookingNumber)}</span>
   </footer>
 </main>
@@ -324,7 +324,7 @@ function buildItineraryHtml(booking) {
     </div>
     <div class="section"><h2>Day-wise Plan</h2>${dayBlocks}</div>
   </div>
-  <div class="footer">Him Journey Tours · Print this page to save as PDF</div>
+  <div class="footer">HindHolidays · Print this page to save as PDF</div>
 </div>
 <script>window.onload=()=>{if(new URLSearchParams(location.search).get('print')==='1')window.print()}</script>
 </body></html>`;

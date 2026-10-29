@@ -43,7 +43,7 @@ function buildQuotationShareText({ lead, pkg, pricing, nights, daysCount, quoteN
   return [
     `Hello ${guest},`,
     '',
-    'Your customised travel quotation from Him Journey Tours is ready:',
+    'Your customised travel quotation from HindHolidays is ready:',
     '',
     pkg?.name ? `📦 Package: ${pkg.name}` : null,
     destination ? `📍 Destination: ${destination}` : null,
@@ -52,7 +52,7 @@ function buildQuotationShareText({ lead, pkg, pricing, nights, daysCount, quoteN
     quoteNumber ? `🔖 Ref: ${quoteNumber}` : null,
     '',
     'Please reply to confirm or request any changes.',
-    'Thank you — Him Journey Tours',
+    'Thank you — HindHolidays',
   ]
     .filter(Boolean)
     .join('\n');
@@ -467,7 +467,7 @@ export default function PackageBuilderWorkspace({
       return;
     }
     const payload = {
-      title: `Him Journey Tours quotation — ${pkg?.name || 'Package'}`,
+      title: `HindHolidays quotation — ${pkg?.name || 'Package'}`,
       text: shareText,
     };
     try {

@@ -7,7 +7,7 @@ const { notifyUser } = require('./notificationService');
 const channels = require('../config/channels');
 
 const POLL_MS = Number(process.env.EMAIL_INBOX_POLL_MS || 5 * 60 * 1000);
-const CRM_MAILBOX = (process.env.SMTP_USER || 'bookinghimjourneytours@gmail.com').toLowerCase();
+const CRM_MAILBOX = (process.env.SMTP_USER || 'info@hindholidays.com').toLowerCase();
 const MAX_MESSAGES_PER_POLL = Number(process.env.EMAIL_INBOX_MAX_MESSAGES || 50);
 const LOOKBACK_DAYS = Number(process.env.EMAIL_INBOX_LOOKBACK_DAYS || 30);
 

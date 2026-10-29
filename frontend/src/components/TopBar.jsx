@@ -119,7 +119,7 @@ export default function TopBar({ onMenuClick }) {
           {mobileOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
         </button>
 
-        {/* Him Journey brand lockup — always visible in header */}
+        {/* HindHolidays brand lockup — always visible in header */}
         <Link
           to="/"
           className="hidden sm:flex items-center gap-2.5 shrink-0 min-w-0 mr-1"
@@ -128,7 +128,7 @@ export default function TopBar({ onMenuClick }) {
           <BrandLogo className="h-8 w-8 shadow-sm ring-1 ring-[#5D5FEF]/20" />
           <div className="min-w-0 leading-tight">
             <p className="text-[13px] font-bold tracking-tight text-slate-900 truncate">
-              Him Journey
+              HindHolidays
             </p>
             <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#5D5FEF] truncate">
               Tours CRM

@@ -59,7 +59,7 @@ export default function ManagerDashboard() {
       <ManagerDashboardPanels data={data} />
 
       <footer className="pt-3 pb-1 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-400">
-        <p>© {new Date().getFullYear()} Him Journey Tours. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} HindHolidays. All rights reserved.</p>
         <p>
           Made with <span className="text-rose-500">♥</span> for your success
         </p>

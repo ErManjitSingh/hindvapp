@@ -8,7 +8,7 @@ We are proud to offer packages that can't be more perfect and take you to such a
 
 So, let our executives assist you 24/7 and create magical moments just for you.`;
 
-/** Policies aligned to Him Journey Tours Policies & Terms PDF */
+/** Policies aligned to HindHolidays Policies & Terms PDF */
 export const QUOTE_POLICIES = {
   remarks: [
     'Rates are subject to change without prior notice until the booking is confirmed.',
@@ -35,12 +35,12 @@ export const QUOTE_POLICIES = {
     'Within 7 days of the travel date or after the start of the trip: 100% of the total package cost will be charged.',
   ],
   amendment: [
-    'Requests to postpone or prepone the travel date must be communicated to Him Journey Tours in writing at least 15 days before the scheduled travel date.',
+    'Requests to postpone or prepone the travel date must be communicated to HindHolidays in writing at least 15 days before the scheduled travel date.',
     'One date change may be permitted without an amendment charge when requested at least 15 days before the travel date, subject to availability.',
     'Any charges imposed by hotels, transporters or other service providers for the date change will be payable by the client or adjusted from the amount already paid.',
     'All postponed/preponed bookings are subject to availability and applicable seasonal/festival rates. Any difference in package cost due to revised dates will be payable by the client.',
     'No postponement or preponement request will normally be accepted within 15 days of the travel date, except where special consideration is possible due to circumstances such as natural calamities, strikes or other exceptional situations.',
-    'The amount paid for a postponed/preponed booking will remain valid for 2 years from the date of the original payment and may be adjusted against a future tour with Him Journey Tours, subject to the applicable terms and availability.',
+    'The amount paid for a postponed/preponed booking will remain valid for 2 years from the date of the original payment and may be adjusted against a future tour with HindHolidays, subject to the applicable terms and availability.',
     'The booking may be transferred to a friend or relative upon request, subject to availability and compliance with the applicable terms and conditions.',
     'Cancellation of a booking will be governed separately by the Cancellation Policy above. Postponement/preponement is not considered a cancellation when processed under this policy.',
   ],

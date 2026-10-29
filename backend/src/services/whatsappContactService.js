@@ -5,18 +5,18 @@ const { logLeadActivity } = require('./leadActivityService');
 
 /** Legacy seed bodies — upgraded in place when still unmodified. */
 const LEGACY_TEMPLATE_BODIES = new Set([
-  'Hello {{customerName}},\n\nThank you for contacting Him Journey Tours.\n\nHow may I assist you regarding your trip to {{destination}}?',
+  'Hello {{customerName}},\n\nThank you for contacting HindHolidays.\n\nHow may I assist you regarding your trip to {{destination}}?',
   'Hello {{customerName}},\n\nYour quotation is ready.\n\nPlease check and let us know if you have any questions.',
   'Hello {{customerName}},\n\nJust following up regarding your travel inquiry.\n\nPlease let us know if you would like to proceed.',
-  'Namaste {{customerName}} 🙏\n\nThank you for connecting with *Him Journey Tours*.\n\nI am {{executiveName}}, and I will personally assist you with your travel plans for *{{destination}}*.\n\nPlease share your preferred travel dates, number of travellers, and any special requirements so I can prepare the best options for you.',
-  'Dear {{customerName}},\n\nGreat news — your *{{destination}}* trip is confirmed with *Him Journey Tours*! 🎉\n\nWe will share your detailed itinerary and vouchers shortly. Please keep this chat saved for any assistance during travel.\n\nThank you for choosing us.\n\n— {{executiveName}}',
+  'Namaste {{customerName}} 🙏\n\nThank you for connecting with *HindHolidays*.\n\nI am {{executiveName}}, and I will personally assist you with your travel plans for *{{destination}}*.\n\nPlease share your preferred travel dates, number of travellers, and any special requirements so I can prepare the best options for you.',
+  'Dear {{customerName}},\n\nGreat news — your *{{destination}}* trip is confirmed with *HindHolidays*! 🎉\n\nWe will share your detailed itinerary and vouchers shortly. Please keep this chat saved for any assistance during travel.\n\nThank you for choosing us.\n\n— {{executiveName}}',
 ]);
 
 const DEFAULT_TEMPLATES = [
   {
     name: 'Welcome',
     body:
-      'Hello {{customerName}},\n\nThank you for connecting with *Him Journey Tours*.\n\nI am {{executiveName}}, and I will personally assist you with your travel plans for *{{destination}}*.\n\nPlease share your preferred travel dates, number of travellers, and any special requirements so I can prepare the best options for you.',
+      'Hello {{customerName}},\n\nThank you for connecting with *HindHolidays*.\n\nI am {{executiveName}}, and I will personally assist you with your travel plans for *{{destination}}*.\n\nPlease share your preferred travel dates, number of travellers, and any special requirements so I can prepare the best options for you.',
     sortOrder: 1,
   },
   {
@@ -40,7 +40,7 @@ const DEFAULT_TEMPLATES = [
   {
     name: 'Schedule a Call',
     body:
-      'Dear {{customerName}},\n\nI would love to walk you through the *{{destination}}* package details on a quick call.\n\nPlease share a convenient time today or tomorrow, and I will call you.\n\n— {{executiveName}} | Him Journey Tours',
+      'Dear {{customerName}},\n\nI would love to walk you through the *{{destination}}* package details on a quick call.\n\nPlease share a convenient time today or tomorrow, and I will call you.\n\n— {{executiveName}} | HindHolidays',
     sortOrder: 5,
   },
   {
@@ -52,19 +52,19 @@ const DEFAULT_TEMPLATES = [
   {
     name: 'Payment Reminder',
     body:
-      'Dear {{customerName}},\n\nA gentle reminder regarding the advance payment for your *{{destination}}* trip.\n\nOnce the payment is received, we will confirm hotels and share your booking voucher.\n\nPlease let me know if you need the payment details again.\n\n— {{executiveName}} | Him Journey Tours',
+      'Dear {{customerName}},\n\nA gentle reminder regarding the advance payment for your *{{destination}}* trip.\n\nOnce the payment is received, we will confirm hotels and share your booking voucher.\n\nPlease let me know if you need the payment details again.\n\n— {{executiveName}} | HindHolidays',
     sortOrder: 7,
   },
   {
     name: 'Booking Confirmed',
     body:
-      'Dear {{customerName}},\n\nGreat news — your *{{destination}}* trip is confirmed with *Him Journey Tours*!\n\nWe will share your detailed itinerary and vouchers shortly. Please keep this chat saved for any assistance during travel.\n\nThank you for choosing us.\n\n— {{executiveName}}',
+      'Dear {{customerName}},\n\nGreat news — your *{{destination}}* trip is confirmed with *HindHolidays*!\n\nWe will share your detailed itinerary and vouchers shortly. Please keep this chat saved for any assistance during travel.\n\nThank you for choosing us.\n\n— {{executiveName}}',
     sortOrder: 8,
   },
   {
     name: 'Thank You',
     body:
-      'Dear {{customerName}},\n\nThank you for choosing *Him Journey Tours* for your *{{destination}}* journey.\n\nIt was a pleasure assisting you. If you need any help before or during the trip, simply reply here — I am available for you.\n\nWishing you a wonderful vacation!\n\n— {{executiveName}}',
+      'Dear {{customerName}},\n\nThank you for choosing *HindHolidays* for your *{{destination}}* journey.\n\nIt was a pleasure assisting you. If you need any help before or during the trip, simply reply here — I am available for you.\n\nWishing you a wonderful vacation!\n\n— {{executiveName}}',
     sortOrder: 9,
   },
 ];
@@ -73,7 +73,7 @@ function renderTemplate(body, lead, user) {
   return String(body || '')
     .replace(/\{\{customerName\}\}/g, lead?.name || 'Customer')
     .replace(/\{\{destination\}\}/g, lead?.destination || 'your destination')
-    .replace(/\{\{executiveName\}\}/g, user?.name || 'Him Journey Tours')
+    .replace(/\{\{executiveName\}\}/g, user?.name || 'HindHolidays')
     .replace(/\{\{quoteNumber\}\}/g, lead?.quoteNumber || '');
 }
 

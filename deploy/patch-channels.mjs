@@ -8,7 +8,7 @@ import { Client } from 'ssh2';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(__dirname, '..');
 const PASSWORD = process.env.VPS_PASS;
-const APP = '/var/www/crm.himjourneytours.in';
+const APP = '/var/www/crm.hindholidays.com';
 
 if (!PASSWORD) {
   console.error('Set VPS_PASS');
@@ -104,7 +104,7 @@ try {
       `tar -xzf /tmp/himjourney-channels.tgz -C ${APP}`,
       'rm -f /tmp/himjourney-channels.tgz',
       `cd ${APP}/frontend && NODE_OPTIONS=--max-old-space-size=2048 npm run build`,
-      'pm2 restart himjourney-crm-api --update-env',
+      'pm2 restart hindholidays-crm-api --update-env',
       'sleep 4',
       'echo ==HEALTH==',
       'curl -sS http://127.0.0.1:3000/api/health',
@@ -118,7 +118,7 @@ try {
       'echo ==EMAIL==',
       'curl -sS -o /tmp/em.json -w "%{http_code}" -H "Authorization: Bearer x" http://127.0.0.1:3000/api/emails/stats; echo; cat /tmp/em.json; echo',
       'echo ==OUT==',
-      'tail -12 /root/.pm2/logs/himjourney-crm-api-out-197.log',
+      'tail -12 /root/.pm2/logs/hindholidays-crm-api-out-197.log',
     ].join(' && '),
   );
 } finally {

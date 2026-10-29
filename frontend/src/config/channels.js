@@ -1,5 +1,5 @@
 /**
- * Channel integrations are off until new Him Journey Meta / WhatsApp / email
+ * Channel integrations are off until new HindHolidays Meta / WhatsApp / email
  * credentials are provided. Flip the matching VITE_* flag after backend env is enabled.
  */
 export const CHANNELS = {

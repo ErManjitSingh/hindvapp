@@ -8,7 +8,7 @@ import { Client } from 'ssh2';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(__dirname, '..');
 const PASSWORD = process.env.VPS_PASS;
-const APP = '/var/www/crm.himjourneytours.in';
+const APP = '/var/www/crm.hindholidays.com';
 
 if (!PASSWORD) {
   console.error('Set VPS_PASS');
@@ -89,11 +89,11 @@ try {
     [
       `tar -xzf /tmp/himjourney-status-filter.tgz -C ${APP}`,
       'rm -f /tmp/himjourney-status-filter.tgz',
-      'pm2 restart himjourney-crm-api --update-env',
+      'pm2 restart hindholidays-crm-api --update-env',
       'sleep 3',
       `cd ${APP}/frontend && NODE_OPTIONS=--max-old-space-size=2048 npm run build`,
-      'curl -sS -o /dev/null -w "SITE %{http_code}\\n" https://crm.himjourneytours.in/',
-      'curl -sS -o /dev/null -w "API %{http_code}\\n" https://crm.himjourneytours.in/api/health',
+      'curl -sS -o /dev/null -w "SITE %{http_code}\\n" https://crm.hindholidays.com/',
+      'curl -sS -o /dev/null -w "API %{http_code}\\n" https://crm.hindholidays.com/api/health',
     ].join(' && '),
   );
 } finally {

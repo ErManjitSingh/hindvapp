@@ -159,7 +159,7 @@ export default function PaymentVoucherModal({
               <FileText className="w-5 h-5" />
             </span>
             <div className="min-w-0">
-              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-teal-200/90">Him Journey Tours</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-teal-200/90">HindHolidays</p>
               <h3 className="text-lg font-black text-white truncate">Payment Voucher</h3>
               <p className="text-xs text-slate-300 truncate">#{receiptNo}</p>
             </div>
@@ -308,7 +308,7 @@ export default function PaymentVoucherModal({
             <div className="rounded-[22px] border border-slate-200 bg-white p-4 sm:p-5">
               <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500 mb-3">Terms &amp; conditions</p>
               <ol className="list-decimal space-y-1.5 pl-4 text-[12px] leading-relaxed text-slate-600">
-                <li>All payments made to Him Journey Tours are valid only against an official receipt issued by the company.</li>
+                <li>All payments made to HindHolidays are valid only against an official receipt issued by the company.</li>
                 <li>Late payment charges of 18% p.a. may apply to overdue outstanding amounts.</li>
                 <li>Any discrepancy regarding this receipt should be communicated in writing within 3 days of receipt.</li>
                 <li>The remaining balance must be paid before the travel date, as per the agreed booking terms.</li>

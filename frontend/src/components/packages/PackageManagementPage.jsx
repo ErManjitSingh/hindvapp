@@ -225,7 +225,7 @@ export default function PackageManagementPage() {
             </span>
           </div>
           <p className="text-sm text-content-muted">
-            Him Journey catalog + your own packages. Create new or edit a private copy.
+            HindHolidays catalog + your own packages. Create new or edit a private copy.
           </p>
         </div>
         <div className="flex flex-wrap gap-2">

@@ -111,20 +111,20 @@ export default function EmailComposerModal({
 
     if (quotation || defaultCategory === 'quotation') {
       setSubject(
-        `Your Him Journey Tours quotation${quotation?.quoteNumber ? ` (${quotation.quoteNumber})` : ''} — ${destination}`
+        `Your HindHolidays quotation${quotation?.quoteNumber ? ` (${quotation.quoteNumber})` : ''} — ${destination}`
       );
       setMessage(
         [
           `Dear ${lead?.name || 'Guest'},`,
           '',
-          `Thank you for choosing Him Journey Tours. Your personalised quotation for ${destination} is ready.`,
+          `Thank you for choosing HindHolidays. Your personalised quotation for ${destination} is ready.`,
           quotation?.quoteNumber ? `Quotation reference: ${quotation.quoteNumber}` : null,
           amountLabel ? `Package amount: ${amountLabel}` : null,
           '',
           'Please review the details and reply to this email to confirm or request changes. Our team is happy to customise hotels, transfers and sightseeing for you.',
           '',
           'Warm regards,',
-          user?.name || 'Him Journey Tours Sales Team',
+          user?.name || 'HindHolidays Sales Team',
         ]
           .filter(Boolean)
           .join('\n')
@@ -401,7 +401,7 @@ export default function EmailComposerModal({
                     <div className="flex flex-col items-center justify-center min-h-[380px] text-center p-8 text-content-muted">
                       <Mail className="w-10 h-10 mb-3 opacity-30" />
                       <p className="text-sm font-medium">Start typing to see the branded email</p>
-                      <p className="text-xs mt-1 opacity-70">Your customer receives a premium Him Journey Tours design</p>
+                      <p className="text-xs mt-1 opacity-70">Your customer receives a premium HindHolidays design</p>
                     </div>
                   )}
                 </div>

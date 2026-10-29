@@ -1,6 +1,6 @@
 # Enterprise Travel Quotation Builder
 
-> **Scope:** Core revenue module for Him Journey Tours. Professional travel quotations comparable to leading OTAs / DMCs, with full lifecycle from draft → send → track → approve → convert.
+> **Scope:** Core revenue module for HindHolidays. Professional travel quotations comparable to leading OTAs / DMCs, with full lifecycle from draft → send → track → approve → convert.
 
 > **Principle:** All pricing, profit, and approval logic runs **server-side**. PDF generation and sharing are auditable. Inventory (packages, hotels, cabs, activities) is **snapshotted** on the quotation so historical quotes never change when master data is updated.
 

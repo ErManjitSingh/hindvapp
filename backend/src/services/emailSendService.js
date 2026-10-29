@@ -60,7 +60,7 @@ function buildClientEmailHtml(bodyText, { lead, category, subject, payload, user
     quotationNumber: payload.quotationNumber,
     amount: formatAmount(payload.amount ?? lead.budget),
     travelDate: formatTravelDate(lead.travelDate),
-    executiveName: user?.name || 'Him Journey Tours Sales Team',
+    executiveName: user?.name || 'HindHolidays Sales Team',
   });
 }
 

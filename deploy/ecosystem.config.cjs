@@ -1,8 +1,8 @@
 module.exports = {
   apps: [
     {
-      name: 'himjourney-crm-api',
-      cwd: '/var/www/crm.himjourneytours.in/backend',
+      name: 'hindholidays-crm-api',
+      cwd: '/var/www/crm.hindholidays.com/backend',
       script: 'src/server.js',
       instances: 1,
       exec_mode: 'fork',

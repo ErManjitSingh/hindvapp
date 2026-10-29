@@ -161,7 +161,7 @@ export default function PackageFormModal({
           </h3>
           {isClone && !isCreate && (
             <p className="text-xs text-amber-700 bg-amber-500/10 border border-amber-500/20 rounded-lg px-2.5 py-1 mt-2 inline-block">
-              This is your private copy — Him Journey catalog original stays unchanged
+              This is your private copy — HindHolidays catalog original stays unchanged
             </p>
           )}
           {isCreate && (

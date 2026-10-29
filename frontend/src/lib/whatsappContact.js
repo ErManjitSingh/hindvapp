@@ -10,7 +10,7 @@ export function renderWhatsAppTemplate(body, lead = {}, user = {}) {
   return String(body || '')
     .replace(/\{\{customerName\}\}/g, lead.name || 'Customer')
     .replace(/\{\{destination\}\}/g, lead.destination || 'your destination')
-    .replace(/\{\{executiveName\}\}/g, user?.name || 'Him Journey Tours')
+    .replace(/\{\{executiveName\}\}/g, user?.name || 'HindHolidays')
     .replace(/\{\{quoteNumber\}\}/g, lead.quoteNumber || '');
 }
 

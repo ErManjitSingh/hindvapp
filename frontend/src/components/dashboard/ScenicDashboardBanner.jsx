@@ -36,9 +36,7 @@ export default function ScenicDashboardBanner({ filters, onOpenFilters }) {
   const { user } = useAuth();
   const firstName = (user?.name || 'Admin').split(' ')[0];
   const chip = formatChip(filters);
-  const place = COMPANY_INFO.address.includes('Solan')
-    ? 'Solan, Himachal Pradesh'
-    : 'Himachal Pradesh';
+  const place = COMPANY_INFO.website || 'hindholidays.com';
 
   return (
     <div className="relative overflow-hidden rounded-[22px] min-h-[168px] shadow-sm">

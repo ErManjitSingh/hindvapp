@@ -1,4 +1,4 @@
-/** Header accent themes — Him Journey brand (#5D5FEF) first */
+/** Header accent themes — HindHolidays brand (#5D5FEF) first */
 export const TOPBAR_ACCENTS = {
   brand: {
     wash: 'from-[#5D5FEF]/[0.07] via-transparent to-sky-500/[0.04]',

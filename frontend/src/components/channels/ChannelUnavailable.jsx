@@ -6,8 +6,8 @@ export default function ChannelUnavailable({ channel }) {
   const Icon = isWhatsApp ? MessageCircle : Mail;
   const title = isWhatsApp ? 'WhatsApp is not connected' : 'Email is not connected';
   const body = isWhatsApp
-    ? 'WhatsApp / Meta is not connected yet. This inbox will come back after the Him Journey WhatsApp number is added.'
-    : 'Email is not connected yet. Sending will come back after the Him Journey SMTP details are added.';
+    ? 'WhatsApp / Meta is not connected yet. This inbox will come back after the HindHolidays WhatsApp number is added.'
+    : 'Email is not connected yet. Sending will come back after the HindHolidays SMTP details are added.';
 
   return (
     <div className="flex min-h-[60vh] items-center justify-center p-6">

@@ -118,7 +118,7 @@ export default function EmailSentViewModal({ open, onClose, emailLogId, fallback
               <p>
                 <span className="font-semibold text-slate-500">From:</span>{' '}
                 <span className="text-slate-800">
-                  {message.from?.name || 'Him Journey Tours'}
+                  {message.from?.name || 'HindHolidays'}
                   {message.from?.email ? ` <${message.from.email}>` : ''}
                 </span>
               </p>

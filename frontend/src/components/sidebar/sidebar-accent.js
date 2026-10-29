@@ -1,4 +1,4 @@
-/** Dark navy sidebar with purple active states — matches Him Journey Tours design */
+/** Dark navy sidebar with purple active states — matches HindHolidays design */
 const DARK_NAVY = {
   brandGradient: 'from-orange-500 to-orange-600',
   brandShadow: 'shadow-orange-500/40',

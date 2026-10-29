@@ -11,10 +11,10 @@ self.addEventListener('push', (event) => {
   try {
     data = event.data ? event.data.json() : {};
   } catch {
-    data = { title: 'Him Journey Tours', body: event.data ? event.data.text() : '' };
+    data = { title: 'HindHolidays', body: event.data ? event.data.text() : '' };
   }
 
-  const title = data.title || 'Him Journey Tours';
+  const title = data.title || 'HindHolidays';
   const options = {
     body: data.body || '',
     icon: '/favicon.ico',

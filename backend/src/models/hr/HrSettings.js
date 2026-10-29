@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const hrSettingsSchema = new mongoose.Schema(
   {
     key: { type: String, unique: true, default: 'default' },
-    companyName: { type: String, default: 'Him Journey Tours' },
+    companyName: { type: String, default: 'HindHolidays' },
     workingDays: {
       type: [String],
       default: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],

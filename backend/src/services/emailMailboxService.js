@@ -12,7 +12,7 @@ const {
   invalidateMailboxCache,
 } = require('./emailMailboxCache');
 
-const CRM_MAIL = (process.env.SMTP_USER || 'bookinghimjourneytours@gmail.com').toLowerCase();
+const CRM_MAIL = (process.env.SMTP_USER || 'info@hindholidays.com').toLowerCase();
 
 const REPLY_LIST_SELECT =
   'fromEmail fromName subject snippet receivedAt leadId emailLogId createdAt';
@@ -82,7 +82,7 @@ function mapSentRow(row, leadMap) {
     mailAction: 'sent',
     executiveId: row.sentBy ? String(row.sentBy) : null,
     executiveName: row.sentByName || '',
-    from: { name: row.sentByName || 'Him Journey Tours', email: row.from || CRM_MAIL },
+    from: { name: row.sentByName || 'HindHolidays', email: row.from || CRM_MAIL },
     to: row.to || [],
     subject: row.subject,
     snippet: row.status === 'failed'

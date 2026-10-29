@@ -62,12 +62,12 @@ function letterFor(booking, hotel) {
   return [
     'Dear Sir/Ma’am,',
     '',
-    'Greetings from Him Journey Tours!',
+    'Greetings from HindHolidays!',
     '',
     'Kindly confirm the below booking.',
     '',
     `* Guest Name: ${booking.customerName || '—'}`,
-    `* Company Name: ${hotel.companyName || 'Him Journey Tours'}`,
+    `* Company Name: ${hotel.companyName || 'HindHolidays'}`,
     `* Check-in Date: ${formatDate(hotel.checkIn || booking.travelDate)}`,
     `* Check-out Date: ${formatDate(hotel.checkOut || booking.returnDate)}`,
     `* Number of Nights: ${hotel.nights || 1}`,
@@ -144,7 +144,7 @@ export default function HotelBookingSection({
           email: savedHotel.email,
           phone: savedHotel.phone,
           contactPerson: savedHotel.contactPerson,
-          companyName: savedHotel.companyName || 'Him Journey Tours',
+          companyName: savedHotel.companyName || 'HindHolidays',
           mealPlan: savedHotel.mealPlan,
           rooms: savedHotel.rooms || 1,
           nights: savedHotel.nights || 1,
@@ -239,7 +239,7 @@ export default function HotelBookingSection({
               <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 <Field label="Company name" className="sm:col-span-2 lg:col-span-1">
                   <input
-                    value={hotel.companyName || 'Him Journey Tours'}
+                    value={hotel.companyName || 'HindHolidays'}
                     onChange={(e) => update(index, { companyName: e.target.value })}
                     className="input-premium h-10 w-full rounded-xl text-sm"
                   />

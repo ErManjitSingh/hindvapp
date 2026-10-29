@@ -8,7 +8,7 @@ import { Client } from 'ssh2';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(__dirname, '..');
 const PASSWORD = process.env.VPS_PASS;
-const APP = '/var/www/crm.himjourneytours.in';
+const APP = '/var/www/crm.hindholidays.com';
 
 if (!PASSWORD) {
   console.error('Set VPS_PASS');
@@ -119,7 +119,7 @@ try {
       `rm -f ${APP}/frontend/src/components/leads/LeadBranchTransferModal.jsx`,
       `rm -f ${APP}/frontend/src/store/slices/branchSlice.js`,
       `cd ${APP}/frontend && NODE_OPTIONS=--max-old-space-size=2048 npm run build`,
-      'curl -sS -o /dev/null -w "SITE %{http_code}\\n" https://crm.himjourneytours.in/',
+      'curl -sS -o /dev/null -w "SITE %{http_code}\\n" https://crm.hindholidays.com/',
     ].join(' && '),
   );
 } finally {

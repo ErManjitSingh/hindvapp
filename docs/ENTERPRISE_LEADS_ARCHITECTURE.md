@@ -2,7 +2,7 @@
 
 ## Overview
 
-Extends the existing Him Journey Tours lead module with 18 enterprise capabilities while preserving:
+Extends the existing HindHolidays lead module with 18 enterprise capabilities while preserving:
 - Multi-branch scoping (`branchId`)
 - RBAC (`requirePermission`, `authorize`)
 - Real-time notifications (Socket + `Notification` model)

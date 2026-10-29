@@ -8,13 +8,15 @@ import { Client } from 'ssh2';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(__dirname, '..');
-const HOST = process.env.VPS_HOST || '187.127.188.30';
+// Disabled default host — HindHolidays uses a NEW domain/VPS (do not push to old Him Journey server).
+const HOST = process.env.VPS_HOST;
 const USER = process.env.VPS_USER || 'root';
 const PASSWORD = process.env.VPS_PASS;
-const APP = '/var/www/crm.himjourneytours.in';
+const APP = process.env.VPS_APP_PATH || '/var/www/crm.hindholidays.com';
 
-if (!PASSWORD) {
-  console.error('Set VPS_PASS');
+if (!HOST || !PASSWORD) {
+  console.error('Deploy blocked. Set VPS_HOST and VPS_PASS for the NEW HindHolidays server only.');
+  console.error('Old Him Journey VPS must not be used.');
   process.exit(1);
 }
 
@@ -112,7 +114,7 @@ function sftpWrite(conn, remote, contents) {
 
 const mongoPass = randAlnum(28);
 const jwtSecret = crypto.randomBytes(48).toString('hex');
-const mongoUri = `mongodb://crm_app:${mongoPass}@127.0.0.1:27017/crm_himjourneytours?authSource=crm_himjourneytours`;
+const mongoUri = `mongodb://crm_app:${mongoPass}@127.0.0.1:27017/crm_hindholidays?authSource=crm_hindholidays`;
 
 const envBody = [
   'PORT=3000',
@@ -123,8 +125,8 @@ const envBody = [
   `JWT_SECRET=${jwtSecret}`,
   'JWT_EXPIRES_IN=30d',
   '',
-  'CORS_ORIGINS=https://crm.himjourneytours.in,http://crm.himjourneytours.in',
-  'COMPANY_PHONE=+91 9317157005',
+  'CORS_ORIGINS=https://crm.hindholidays.com,http://crm.hindholidays.com',
+  'COMPANY_PHONE=+91 70188 55020',
   '',
   'SEED_PASSWORD=123456',
   '',
@@ -133,13 +135,13 @@ const envBody = [
   '',
   'VAPID_PUBLIC_KEY=',
   'VAPID_PRIVATE_KEY=',
-  'VAPID_SUBJECT=mailto:bookinghimjourneytours@gmail.com',
+  'VAPID_SUBJECT=mailto:info@hindholidays.com',
   '',
   'SMTP_HOST=',
   'SMTP_PORT=587',
-  'SMTP_USER=bookinghimjourneytours@gmail.com',
+  'SMTP_USER=info@hindholidays.com',
   'SMTP_PASS=',
-  'SMTP_FROM_NAME=Him Journey Tours',
+  'SMTP_FROM_NAME=HindHolidays',
   '',
 ].join('\n');
 
@@ -163,7 +165,7 @@ function toLf(file) {
   fs.writeFileSync(abs, fs.readFileSync(abs, 'utf8').replace(/\r\n/g, '\n'));
 }
 toLf('deploy/remote-setup.sh');
-toLf('deploy/nginx/crm.himjourneytours.in.conf');
+toLf('deploy/nginx/crm.hindholidays.com.conf');
 toLf('deploy/ecosystem.config.cjs');
 
 const tarPath = path.join(os.tmpdir(), `himjourney-crm-${Date.now()}.tgz`);
@@ -180,7 +182,7 @@ execLocal('tar.exe', [
   '--exclude=backend/uploads',
   'backend',
   'frontend',
-  'deploy/nginx/crm.himjourneytours.in.conf',
+  'deploy/nginx/crm.hindholidays.com.conf',
   'deploy/ecosystem.config.cjs',
   'deploy/remote-setup.sh',
 ]);
@@ -203,7 +205,7 @@ try {
 }
 
 console.log('\nDeploy finished.');
-console.log('URL: https://crm.himjourneytours.in');
+console.log('URL: https://crm.hindholidays.com');
 console.log('Admin: admin@crm.com / 123456');
 console.log(`Mongo user: crm_app`);
 console.log(`Mongo password: ${mongoPass}`);

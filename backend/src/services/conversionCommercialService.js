@@ -464,7 +464,7 @@ async function saveCommercialForm({ leadId, executiveId, branchId, body }) {
       payment,
       booking,
       quotation,
-      actor: { _id: executiveId, name: 'Him Journey Tours' },
+      actor: { _id: executiveId, name: 'HindHolidays' },
     });
   } catch (err) {
     console.error('[saveCommercialForm] receipt refresh failed:', err.message);
@@ -637,7 +637,7 @@ async function recordAdditionalLeadPayment({
       payment,
       booking,
       quotation,
-      actor: { _id: userId, name: 'Him Journey Tours' },
+      actor: { _id: userId, name: 'HindHolidays' },
     });
   } catch (err) {
     console.error('[recordAdditionalLeadPayment] receipt refresh failed:', err.message);

@@ -2,7 +2,7 @@ import fs from 'fs';
 import { Client } from 'ssh2';
 
 const PASSWORD = process.env.VPS_PASS;
-const APP = '/var/www/crm.himjourneytours.in';
+const APP = '/var/www/crm.hindholidays.com';
 const files = [
   ['backend/src/config/ensureIndexes.js', `${APP}/backend/src/config/ensureIndexes.js`],
   ['backend/src/config/db.js', `${APP}/backend/src/config/db.js`],
@@ -49,7 +49,7 @@ conn
       }
       await exec(
         conn,
-        'pm2 restart himjourney-crm-api && sleep 5 && echo ==HEALTH== && curl -sS http://127.0.0.1:3000/api/health && echo && echo ==ERR== && tail -8 /root/.pm2/logs/himjourney-crm-api-error-197.log && echo ==OUT== && tail -15 /root/.pm2/logs/himjourney-crm-api-out-197.log',
+        'pm2 restart hindholidays-crm-api && sleep 5 && echo ==HEALTH== && curl -sS http://127.0.0.1:3000/api/health && echo && echo ==ERR== && tail -8 /root/.pm2/logs/hindholidays-crm-api-error-197.log && echo ==OUT== && tail -15 /root/.pm2/logs/hindholidays-crm-api-out-197.log',
       );
     } catch (e) {
       console.error(e.message);

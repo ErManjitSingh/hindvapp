@@ -20,6 +20,7 @@
     "seed:load-test-leads": "node src/scripts/seedLoadTestLeads.js",
     "clear:load-test-leads": "node src/scripts/clearLoadTestLeads.js",
     "clear-leads": "node src/scripts/clearLeads.js",
+    "reset:new-client": "node src/scripts/resetForNewClient.js",
     "remove-sales-demo-users": "node src/scripts/removeSalesDemoUsers.js",
     "keep-admin-only": "node src/scripts/keepAdminOnly.js",
     "unassign-admin-leads": "node src/scripts/unassignAdminOwnedLeads.js",

@@ -20,7 +20,7 @@ const {
  */
 const QUESTIONS = {
   welcome:
-    'Hello! 👋 Welcome to *Him Journey Tours*.\n\n' +
+    'Hello! 👋 Welcome to *HindHolidays*.\n\n' +
     'To help us plan your trip, please share 4 quick details:\n\n' +
     '1️⃣ What is your preferred *destination*?\n' +
     '(e.g. Manali, Goa, Dubai)\n\n' +

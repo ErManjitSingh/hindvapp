@@ -155,7 +155,7 @@ function buildPaymentReceiptHtml({
   agent,
 }) {
   const v = buildVoucherPayload({ lead, payment, booking, quotation, agent });
-  const executive = agent?.name || actor?.name || booking?.executiveName || 'Him Journey Tours Sales';
+  const executive = agent?.name || actor?.name || booking?.executiveName || 'HindHolidays Sales';
   const agentPhone = agent?.phone || '';
   const quoteOrBooking = v.quoteNumber !== '—' ? v.quoteNumber : v.bookingNumber;
   const refLine = v.paymentRef ? `Ref: ${escapeHtml(v.paymentRef)}` : 'Confirmed';
@@ -229,7 +229,7 @@ function buildPaymentReceiptHtml({
   <div class="hero">
     <div class="hero-inner">
       <div>
-        <p class="brand">HIM JOURNEY TOURS</p>
+        <p class="brand">HINDHOLIDAYS</p>
         <h1 class="title">Advance / Token Receipt</h1>
         <p class="sub">Voucher ID: ${escapeHtml(v.receiptNumber)} · ${escapeHtml(v.paidAtLabel)}</p>
       </div>
@@ -326,7 +326,7 @@ function buildPaymentReceiptHtml({
     <div class="terms">
       <h3>Terms &amp; Conditions</h3>
       <ol>
-        <li>All payments made to Him Journey Tours are valid only against an official receipt issued by the company.</li>
+        <li>All payments made to HindHolidays are valid only against an official receipt issued by the company.</li>
         <li>Late payment charges of 18% p.a. may apply to overdue outstanding amounts.</li>
         <li>Any discrepancy regarding this receipt should be communicated in writing within 3 days of receipt.</li>
         <li>The remaining balance must be paid before the travel date, as per the agreed booking terms.</li>
@@ -395,11 +395,11 @@ async function sendReceiptToCustomer({ lead, payment, actor }) {
   const total = Number(payment.amount) || 0;
   const advance = Number(payment.paidAmount) || 0;
   const balance = Math.max(0, total - advance);
-  const subject = `Him Journey Tours — Payment voucher ${payment.receiptNumber || ''}`.trim();
+  const subject = `HindHolidays — Payment voucher ${payment.receiptNumber || ''}`.trim();
   const text = [
     `Dear ${lead?.name || payment.customerName || 'Customer'},`,
     '',
-    `Thank you for choosing Him Journey Tours for your trip to ${lead?.destination || 'your destination'}.`,
+    `Thank you for choosing HindHolidays for your trip to ${lead?.destination || 'your destination'}.`,
     '',
     `Package total: ${formatINR(total)}`,
     `Advance / token received: ${formatINR(advance)}`,
@@ -408,7 +408,7 @@ async function sendReceiptToCustomer({ lead, payment, actor }) {
     'Please find your advance / token receipt in this email.',
     '',
     `Warm regards,`,
-    actor?.name || 'Him Journey Tours Sales Team',
+    actor?.name || 'HindHolidays Sales Team',
   ].join('\n');
 
   const log = await EmailLog.create({
@@ -783,7 +783,7 @@ async function getLeadPaymentReceipt(leadId, { branchId, extraFilter = {}, refre
       payment,
       booking,
       quotation,
-      actor: { name: booking?.executiveName || 'Him Journey Tours' },
+      actor: { name: booking?.executiveName || 'HindHolidays' },
     });
   }
 

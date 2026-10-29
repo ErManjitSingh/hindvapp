@@ -525,7 +525,7 @@ export default function CatalogHotelSelector({
               <p className="text-xs text-content-muted mt-1">
                 {debouncedSearch
                   ? 'Try a different search term or clear the search.'
-                  : 'Try a different destination or check the Him Journey catalog.'}
+                  : 'Try a different destination or check the HindHolidays catalog.'}
               </p>
             </div>
           ) : (

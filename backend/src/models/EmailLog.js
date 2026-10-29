@@ -18,7 +18,7 @@ const emailLogSchema = new mongoose.Schema(
     quotationId: { type: mongoose.Schema.Types.ObjectId, ref: 'Quotation' },
     branchId: { type: mongoose.Schema.Types.ObjectId, ref: 'Branch', index: true },
     category: { type: String, enum: EMAIL_CATEGORIES, default: 'custom', index: true },
-    from: { type: String, trim: true, default: 'bookinghimjourneytours@gmail.com' },
+    from: { type: String, trim: true, default: 'info@hindholidays.com' },
     to: [{ type: String, trim: true, required: true }],
     cc: [{ type: String, trim: true }],
     bcc: [{ type: String, trim: true }],

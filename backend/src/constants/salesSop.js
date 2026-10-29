@@ -1,4 +1,4 @@
-/** Him Journey Tours Sales SOP — Phase 1 constants */
+/** HindHolidays Sales SOP — Phase 1 constants */
 
 const LEAD_ACCEPT_MINUTES = 30;
 

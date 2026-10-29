@@ -15,7 +15,7 @@ ls /var/www/leadmanagement/superadmin 2>/dev/null | head
 echo ==ALL_ENV==
 find /var/www /root /opt -name '.env' 2>/dev/null | head -40
 echo ==LANDING==
-ls /var/www/landing.himjourneytours.in | head -20
+ls /var/www/landing.hindholidays.com | head -20
 echo ==MONGO_USERS_HINT==
 grep -RIl 'user: .crm' /var/www /root --include='*.js' --include='*.md' --include='*.sh' 2>/dev/null | head
 echo ==IHD_API_ENV==

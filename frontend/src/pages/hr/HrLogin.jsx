@@ -92,7 +92,7 @@ export default function HrLogin() {
       >
         <div className="text-center mb-6">
           <BrandLogo className="mx-auto mb-4 h-16 w-16 shadow-lg shadow-black/20" />
-          <h1 className="text-2xl font-bold text-slate-800 tracking-tight">Him Journey Tours HR</h1>
+          <h1 className="text-2xl font-bold text-slate-800 tracking-tight">HindHolidays HR</h1>
           <p className="text-sm text-slate-600 mt-1">HR Management Portal — sign in to continue</p>
         </div>
 

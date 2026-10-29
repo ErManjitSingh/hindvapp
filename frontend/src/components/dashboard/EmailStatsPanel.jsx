@@ -12,7 +12,7 @@ export default function EmailStatsPanel({ stats }) {
   ];
 
   return (
-    <DashboardPanel title="Email Activity" subtitle="Today · bookinghimjourneytours@gmail.com">
+    <DashboardPanel title="Email Activity" subtitle="Today · info@hindholidays.com">
       {!stats.configured && (
         <p className="text-sm text-amber-700 bg-amber-500/10 border border-amber-500/20 rounded-xl px-3 py-2 mb-4">
           SMTP is not configured on the server. Set SMTP_HOST, SMTP_USER, and SMTP_PASS to enable sending.

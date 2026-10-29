@@ -1,5 +1,5 @@
 /**
- * Inbound channels stay off until Him Journey credentials are provided.
+ * Inbound channels stay off until HindHolidays credentials are provided.
  * Set FACEBOOK_ENABLED / WHATSAPP_ENABLED / EMAIL_ENABLED / PUBLIC_LEAD_INGEST_ENABLED
  * to "true" in production .env when wiring the new accounts.
  */

@@ -8,7 +8,7 @@ import { Client } from 'ssh2';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(__dirname, '..');
 const PASSWORD = process.env.VPS_PASS;
-const APP = '/var/www/crm.himjourneytours.in';
+const APP = '/var/www/crm.hindholidays.com';
 const HOST = process.env.VPS_HOST || '187.127.188.30';
 
 if (!PASSWORD) {
@@ -129,11 +129,11 @@ cd "\$APP/backend" && node src/scripts/backfillClosedLeadTempNa.js
 cd "\$APP/backend" && node src/scripts/backfillBookedLeadPayments.js
 cd "\$APP/backend" && node src/scripts/backfillRevertExecutiveLeadSources.js
 cd "\$APP/backend" && node src/scripts/backfillConfirmOpsBookings.js
-pm2 restart himjourney-crm-api --update-env
+pm2 restart hindholidays-crm-api --update-env
 nginx -s reload || true
 rm -rf /tmp/hj-extract /tmp/himjourney-fix.tgz
 sleep 1
-curl -s https://crm.himjourneytours.in/ | grep -o 'index-[A-Za-z0-9_-]*\\.js' | head -1
+curl -s https://crm.hindholidays.com/ | grep -o 'index-[A-Za-z0-9_-]*\\.js' | head -1
 echo DEPLOY_VERIFIED
 `;
 

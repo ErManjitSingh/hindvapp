@@ -74,14 +74,14 @@ app.get('/api/health', (req, res) => {
   const db = getDbStatus();
   res.status(200).json({
     status: 'ok',
-    service: 'himjourney-crm-api',
+    service: 'hindholidays-crm-api',
     database: db,
     time: new Date().toISOString(),
   });
 });
 
 app.get('/api', (req, res) => {
-  res.json({ message: 'Him Journey Tours API', version: '1.0.0' });
+  res.json({ message: 'HindHolidays API', version: '1.0.0' });
 });
 
 app.use('/api', apiLimiter, apiRoutes);

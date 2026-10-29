@@ -9,7 +9,7 @@
 import { Client } from 'ssh2';
 
 const PASSWORD = process.env.VPS_PASS;
-const APP = '/var/www/crm.himjourneytours.in';
+const APP = '/var/www/crm.hindholidays.com';
 const HOST = process.env.VPS_HOST || '187.127.188.30';
 const PAGE_ID = process.env.FACEBOOK_PAGE_ID || '183028372389367';
 
@@ -257,7 +257,7 @@ try {
   await sftpWrite(conn, `${APP}/backend/.env`, next);
   await exec(
     conn,
-    `grep -E '^(FACEBOOK_|WHATSAPP_)' ${APP}/backend/.env | sed -E 's/(TOKEN|SECRET|KEY)=.*/\\1=***SET***/' && pm2 restart himjourney-crm-api --update-env && sleep 2 && curl -sS "http://127.0.0.1:3000/api/facebook/webhook/debug?token=$(grep ^FACEBOOK_VERIFY_TOKEN= ${APP}/backend/.env | cut -d= -f2-)" | head -c 900; echo; echo META_ENV_UPDATED`
+    `grep -E '^(FACEBOOK_|WHATSAPP_)' ${APP}/backend/.env | sed -E 's/(TOKEN|SECRET|KEY)=.*/\\1=***SET***/' && pm2 restart hindholidays-crm-api --update-env && sleep 2 && curl -sS "http://127.0.0.1:3000/api/facebook/webhook/debug?token=$(grep ^FACEBOOK_VERIFY_TOKEN= ${APP}/backend/.env | cut -d= -f2-)" | head -c 900; echo; echo META_ENV_UPDATED`
   );
 } finally {
   conn.end();

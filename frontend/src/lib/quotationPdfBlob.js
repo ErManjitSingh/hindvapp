@@ -212,7 +212,7 @@ export function buildQuotationWhatsAppMessage({ lead, quote, userName } = {}) {
   return [
     `Hello ${guest},`,
     '',
-    'Your travel quotation from Him Journey Tours is ready.',
+    'Your travel quotation from HindHolidays is ready.',
     '',
     pkg ? `📦 Package: ${pkg}` : null,
     destination ? `📍 Destination: ${destination}` : null,
@@ -222,7 +222,7 @@ export function buildQuotationWhatsAppMessage({ lead, quote, userName } = {}) {
     'I am sharing the quotation PDF with you.',
     'Please review and reply if you would like any changes.',
     '',
-    `Thank you — ${userName || 'Him Journey Tours'}`,
+    `Thank you — ${userName || 'HindHolidays'}`,
   ]
     .filter(Boolean)
     .join('\n');

@@ -71,7 +71,7 @@ function hotelConfirmationText(booking, hotel) {
   return [
     'Dear Sir/Ma’am,',
     '',
-    'Greetings from Him Journey Tours!',
+    'Greetings from HindHolidays!',
     '',
     'Kindly confirm the below booking.',
     '',
@@ -108,7 +108,7 @@ function cabConfirmationText(booking, transport) {
   return [
     'Dear Sir/Ma’am,',
     '',
-    'Greetings from Him Journey Tours!',
+    'Greetings from HindHolidays!',
     '',
     'Kindly confirm the below cab booking.',
     '',

@@ -31,7 +31,7 @@ export default function SettingsPage() {
       to: '/settings/email-templates',
       icon: Mail,
       title: 'Email Templates',
-      description: 'Manage email templates for bookinghimjourneytours@gmail.com',
+      description: 'Manage email templates for info@hindholidays.com',
       color: 'text-sky-600 bg-sky-500/10',
     },
   ].filter(Boolean);

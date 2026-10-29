@@ -752,7 +752,7 @@ function resolvePublicApiBase() {
   if (cleaned && !/localhost|127\.0\.0\.1/i.test(cleaned)) {
     return cleaned.endsWith('/api') ? cleaned : `${cleaned}/api`;
   }
-  return 'https://crm.himjourneytours.in/api';
+  return 'https://crm.hindholidays.com/api';
 }
 
 function getDiagnostics(extra = {}) {

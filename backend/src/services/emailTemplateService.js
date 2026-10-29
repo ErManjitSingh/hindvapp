@@ -6,7 +6,7 @@ const DEFAULT_TEMPLATES = [
     category: 'quotation',
     subject: '✨ Your dream trip to {{destination}} — Quotation {{quotationNumber}}',
     body:
-      'Thank you for trusting Him Journey Tours with your travel plans!\n\nWe have carefully crafted a personalised quotation for your journey to {{destination}}. Your quote reference is {{quotationNumber}} with a package value of {{amount}}.\n\nYour preferred travel date: {{travelDate}}.\n\nPlease review the attached quotation at your convenience. Our team is ready to customise every detail — hotels, transfers, sightseeing, and more.\n\nReply to this email or call us anytime to confirm or request changes.',
+      'Thank you for trusting HindHolidays with your travel plans!\n\nWe have carefully crafted a personalised quotation for your journey to {{destination}}. Your quote reference is {{quotationNumber}} with a package value of {{amount}}.\n\nYour preferred travel date: {{travelDate}}.\n\nPlease review the attached quotation at your convenience. Our team is ready to customise every detail — hotels, transfers, sightseeing, and more.\n\nReply to this email or call us anytime to confirm or request changes.',
     sortOrder: 1,
   },
   {
@@ -22,15 +22,15 @@ const DEFAULT_TEMPLATES = [
     category: 'booking_confirmation',
     subject: '🎉 Booking confirmed! Your {{destination}} adventure awaits',
     body:
-      'Wonderful news — your booking is confirmed!\n\nWe are thrilled to be part of your upcoming trip to {{destination}}. Your travel date is {{travelDate}}.\n\nOur operations team is now finalising every detail to ensure a seamless, memorable experience.\n\nYou will receive your vouchers and itinerary shortly. Thank you for choosing Him Journey Tours — where every journey becomes a story.',
+      'Wonderful news — your booking is confirmed!\n\nWe are thrilled to be part of your upcoming trip to {{destination}}. Your travel date is {{travelDate}}.\n\nOur operations team is now finalising every detail to ensure a seamless, memorable experience.\n\nYou will receive your vouchers and itinerary shortly. Thank you for choosing HindHolidays — where every journey becomes a story.',
     sortOrder: 3,
   },
   {
     name: 'Payment Confirmation',
     category: 'payment_confirmation',
-    subject: '✅ Payment received — {{amount}} | Him Journey Tours',
+    subject: '✅ Payment received — {{amount}} | HindHolidays',
     body:
-      'Thank you! We have successfully received your payment of {{amount}}.\n\nYour transaction has been recorded and our team is processing the next steps for your travel arrangements.\n\nIf you need a receipt or have any questions, simply reply to this email.\n\nWe appreciate your trust in Him Journey Tours.',
+      'Thank you! We have successfully received your payment of {{amount}}.\n\nYour transaction has been recorded and our team is processing the next steps for your travel arrangements.\n\nIf you need a receipt or have any questions, simply reply to this email.\n\nWe appreciate your trust in HindHolidays.',
     sortOrder: 4,
   },
   {
@@ -38,7 +38,7 @@ const DEFAULT_TEMPLATES = [
     category: 'welcome',
     subject: 'Welcome aboard, {{customerName}}! 🌏 Your journey starts here',
     body:
-      'Welcome to the Him Journey Tours family!\n\nWe are delighted to have you with us. Your enquiry for {{destination}} has been received and assigned to our dedicated travel specialist.\n\nFrom curated itineraries to handpicked stays — we craft experiences, not just trips.\n\nSit back and relax — we will be in touch shortly with exciting options tailored just for you.',
+      'Welcome to the HindHolidays family!\n\nWe are delighted to have you with us. Your enquiry for {{destination}} has been received and assigned to our dedicated travel specialist.\n\nFrom curated itineraries to handpicked stays — we craft experiences, not just trips.\n\nSit back and relax — we will be in touch shortly with exciting options tailored just for you.',
     sortOrder: 5,
   },
   {
@@ -72,7 +72,7 @@ function renderEmailTemplate(text, context = {}) {
     quotationNumber: context.quotationNumber || context.quoteNumber || '',
     amount: context.amount != null ? formatCurrency(context.amount) : '',
     travelDate: formatTravelDate(context.travelDate),
-    executiveName: context.executiveName || 'Him Journey Tours',
+    executiveName: context.executiveName || 'HindHolidays',
   };
 
   return String(text || '').replace(/\{\{(\w+)\}\}/g, (_, key) => vars[key] ?? '');
